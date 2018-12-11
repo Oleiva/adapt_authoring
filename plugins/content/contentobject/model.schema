@@ -36,6 +36,15 @@
       "validators": [],
       "translatable": true
     },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "title": "Instruction text",
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    },
     "_graphic": {
       "type": "object",
       "title": "",
@@ -75,7 +84,7 @@
       "default": "",
       "inputType": "Text",
       "validators" : [""],
-      "help": "Indicate how long this page or section should take to complete",
+      "help": "Indicates how long this page or section should take to complete",
       "translatable": true
     },
     "_lockedBy": {
@@ -137,7 +146,7 @@
       "inputType": "Checkbox",
       "validators": [],
       "title": "Is this hidden?",
-      "help": "Equivalent to applying the CSS 'display:none'. Unless you have custom code that uses this, it is highly unlikely you would want to change this setting at a page level."
+      "help": "Hides this page from the course menu. Needs to be supported by the menu you are using in your course."
     },
     "_isVisible": {
       "type": "boolean",
@@ -147,6 +156,14 @@
       "validators": [],
       "title": "Is this visible?",
       "help": "Equivalent to the CSS visibility property. Unless you have custom code that uses this, it is highly unlikely you would want to change this setting at a page level."
+    },
+    "_ariaLevel": {
+      "type": "number",
+      "default": 0,
+      "isSetting": true,
+      "inputType": "Number",
+      "validators": ["number"],
+      "help": "If you need to override the default page ARIA level (as defined in Configuration Settings), set this to any number greater than 0."
     },
     "_onScreen": {
       "type": "object",
